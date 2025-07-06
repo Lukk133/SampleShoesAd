@@ -32,6 +32,13 @@ module.exports = {
           filename: 'assets/[name][ext]',
         },
       },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name][ext]',
+        },
+      },
     ],
   },
   plugins: [
@@ -44,11 +51,17 @@ module.exports = {
     }),
   ],
   devServer: {
-    static: {
-      directory: path.join(__dirname, 'dist'),
-    },
+    static: [
+      {
+        directory: path.join(__dirname, 'dist'),
+      },
+      {
+        directory: path.join(__dirname, 'assets'),
+        publicPath: '/assets',
+      },
+    ],
     compress: true,
-    port: 3004,
+    port: 3000,
     open: true,
   },
   resolve: {
