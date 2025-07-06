@@ -1,16 +1,10 @@
 {
   "name": "rectask",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --mode development --config webpack.config.js",
     "build": "webpack --mode production --config webpack.config.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "gsap": "^3.13.0",
     "swiper": "^11.2.10"
@@ -25,7 +19,6 @@
     "mini-css-extract-plugin": "^2.9.2",
     "sass": "^1.89.2",
     "sass-loader": "^16.0.5",
-    "style-loader": "^4.0.0",
     "webpack": "^5.99.9",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.2"

@@ -36,7 +36,6 @@ export default class VideoScene {
     videoPlayer.addEventListener('mouseleave', () => {
       gsap.to(videoPlayer, { scale: 1, duration: 0.3, ease: "power2.out" });
     });
-    
   }
 
   unmount() {
