@@ -1,4 +1,5 @@
 import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -61,11 +62,13 @@ export default class GalleryScene {
     });
     
     this.swiper = new Swiper(swiperEl, {
+      modules: [Navigation, Pagination],
       slidesPerView: 1,
       spaceBetween: 24,
       centeredSlides: true,
-      loop: true,
+      loop: false,
       direction: 'horizontal',
+      allowTouchMove: true,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
