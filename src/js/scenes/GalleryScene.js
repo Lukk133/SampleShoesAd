@@ -69,6 +69,7 @@ export default class GalleryScene {
       loop: false,
       direction: 'horizontal',
       allowTouchMove: true,
+      initialSlide: 0,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -87,11 +88,13 @@ export default class GalleryScene {
 
     this.el.querySelectorAll('.swiper-slide').forEach((slide, idx) => {
       slide.addEventListener('click', () => {
+        console.log(`user_interaction:slide_click:${idx + 1}`);
         this.onSlideClick(idx);
       });
     });
 
     cta.addEventListener('click', () => {
+      console.log('user_interaction:cta_click');
       gsap.to(cta, {
         scale: 0.95,
         duration: 0.1,

@@ -17,6 +17,10 @@ const orientationLock = new OrientationLock();
 function showScene(scene) {
   console.log('showScene called with:', scene.constructor.name);
   
+  // Log scene change event
+  const sceneName = scene.constructor.name.toLowerCase().replace('scene', '');
+  console.log(`scene_change:${sceneName}`);
+  
   if (currentScene) {
     console.log('Cross-fading from:', currentScene.constructor.name, 'to:', scene.constructor.name);
     
