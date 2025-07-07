@@ -69,7 +69,6 @@ export default class GalleryScene {
       loop: false,
       direction: 'horizontal',
       allowTouchMove: true,
-      initialSlide: 0,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -78,10 +77,18 @@ export default class GalleryScene {
         el: '.swiper-pagination',
         clickable: true,
       },
+      touchRatio: 1.5, 
+      threshold: 10,   
+      grabCursor: true,
       breakpoints: {
+        480: {
+          spaceBetween: 12,
+          touchRatio: 1.2,
+          threshold: 15,
+        },
         900: {
           slidesPerView: 2,
-          spaceBetween: 32,
+          spaceBetween: 28,
         }
       }
     });
@@ -110,4 +117,4 @@ export default class GalleryScene {
     if (this.swiper) this.swiper.destroy();
     this.el.remove();
   }
-} 
+}

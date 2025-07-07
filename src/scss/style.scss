@@ -387,11 +387,11 @@ body {
   }
   
   .swiper-button-next, .swiper-button-prev {
-    width: 40px;
-    height: 40px;
+    width: 40px !important;
+    height: 40px !important;
   }
   .swiper-button-next::after, .swiper-button-prev::after {
-    font-size: 14px;
+    font-size: 14px !important;
   }
 }
 
